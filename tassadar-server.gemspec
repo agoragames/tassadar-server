@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'tassadar-server/version'
+require 'tassadar/server/version'
 
 Gem::Specification.new do |gem|
   gem.name          = 'tassadar-server'
@@ -17,6 +17,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'grape'
   gem.add_dependency 'tassadar'
+  gem.add_dependency 'grape'
+  gem.add_dependency 'grape-rabl'
+
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'rack-test'
+  gem.add_development_dependency 'json_spec'
 end

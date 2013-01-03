@@ -1,7 +1,11 @@
-require 'tassadar-server/version'
+require 'tassadar'
+require 'grape'
+require 'grape/rabl'
+
+require 'tassadar/server/version'
+require 'tassadar/server/api'
 
 module Tassadar
   module Server
-    # Your code goes here...
   end
 end
