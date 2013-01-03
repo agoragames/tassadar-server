@@ -18,11 +18,7 @@ module Tassadar
       end
 
       def remote_ip(env)
-        if env.include? 'HTTP_X_FORWARDED_FOR'
-          env['HTTP_X_FORWARDED_FOR']
-        else
-          env['REMOTE_ADDR']
-        end
+        Rack::Request.new(env).ip
       end
       
       def white_listed?(env)
