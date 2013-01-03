@@ -21,6 +21,9 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'grape'
   gem.add_dependency 'grape-rabl'
 
+  gem.add_dependency 'redis'
+  gem.add_dependency 'rack-throttle'
+
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'rack-test'
   gem.add_development_dependency 'json_spec'
