@@ -1,4 +1,5 @@
 $:.unshift File.join(File.dirname(__FILE__), 'lib')
+
 require 'tassadar-server'
 
 use Rack::Config do |env|
@@ -10,6 +11,12 @@ end
 if ENV['REDIS_URL']
   require 'redis'
   $redis = Redis.new url: ENV['REDIS_URL']
+end
+
+if ENV['WHITELIST']
+  require 'tassadar/server/whitelist'
+  use Tassadar::Server::Whitelist,
+    ENV['WHITELIST'].split(',').delete_if(&:empty?)
 end
 
 if ENV['THROTTLE']

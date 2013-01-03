@@ -2,13 +2,11 @@ module Tassadar
   module Server
     class API < ::Grape::API
       version 'v1', :using => :header, :vendor => 'agoragames'
-
       format :json
       formatter :json, Grape::Formatter::Rabl
       content_type :json, 'application/json'
 
       helpers do
-
         def get_file
           unless params[:file] &&
                 (tmpfile = params[:file][:tempfile]) &&
@@ -21,7 +19,6 @@ module Tassadar
         def parse(path)
           Tassadar::SC2::Replay.new(path)
         end
-
       end
 
       resource :sc2 do
