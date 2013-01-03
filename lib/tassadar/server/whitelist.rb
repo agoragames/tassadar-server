@@ -16,9 +16,13 @@ module Tassadar
           ]
         end
       end
+
+      def remote_ip(env)
+        env['X-Forwarded-For'] || env['REMOTE_ADDR']
+      end
       
       def white_listed?(env)
-        @whitelist.include? env['REMOTE_ADDR']
+        @whitelist.include? remote_ip(env)
       end
     end
   end
