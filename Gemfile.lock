@@ -1,0 +1,76 @@
+PATH
+  remote: .
+  specs:
+    tassadar-server (0.0.1)
+      grape
+      grape-rabl
+      tassadar
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (3.2.10)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    backports (2.6.5)
+    bindata (1.4.5)
+    builder (3.1.4)
+    bzip2-ruby (0.2.7)
+    descendants_tracker (0.0.1)
+    diff-lcs (1.1.3)
+    grape (0.2.3)
+      activesupport
+      builder
+      hashie (~> 1.2)
+      multi_json (>= 1.3.2)
+      multi_xml
+      rack
+      rack-accept
+      rack-mount
+      virtus
+    grape-rabl (0.1.0)
+      grape (~> 0.2.3)
+      i18n
+      rabl
+      tilt
+    hashie (1.2.0)
+    i18n (0.6.1)
+    json_spec (1.1.0)
+      multi_json (~> 1.0)
+      rspec (~> 2.0)
+    multi_json (1.5.0)
+    multi_xml (0.5.1)
+    rabl (0.7.9)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
+    rack (1.4.1)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
+    rack-test (0.6.1)
+      rack (>= 1.0)
+    rspec (2.11.0)
+      rspec-core (~> 2.11.0)
+      rspec-expectations (~> 2.11.0)
+      rspec-mocks (~> 2.11.0)
+    rspec-core (2.11.1)
+    rspec-expectations (2.11.3)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.11.2)
+    tassadar (0.1.0)
+      bindata
+      bzip2-ruby
+    tilt (1.3.3)
+    virtus (0.5.4)
+      backports (~> 2.6.1)
+      descendants_tracker (~> 0.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  json_spec
+  rack-test
+  rspec
+  tassadar-server!
