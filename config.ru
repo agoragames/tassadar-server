@@ -15,7 +15,7 @@ end
 if ENV['THROTTLE']
   require 'tassadar/server/throttle'
   use Tassadar::Server::Throttle,
-    max: ENV['THROTTLE'],
+    max: ENV['THROTTLE'].to_i,
     cache: $redis,
     key_prefix: :throttle
 end
