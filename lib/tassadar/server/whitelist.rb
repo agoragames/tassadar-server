@@ -11,8 +11,8 @@ module Tassadar
           @app.call(env)
         else
           [ 403,
-            {'Content-Type' => 'text/plain; charset=utf-8'},
-            'IP is not whitelisted'
+            { 'Content-Type' => 'text/plain; charset=utf-8' },
+            Array( 'IP is not whitelisted' )
           ]
         end
       end
