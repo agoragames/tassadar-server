@@ -11,6 +11,17 @@ This service is designed to enable Tassadar in polyglot or browser-based project
 
 ## Usage
 
+#### Options
+
+The server can be configured using the following environment variables:
+
+| **Option** | **Description** | **Details** |
+|------------|-----------------|-------------|
+| THROTTLE   | Allowed requests per hour | for each user |
+| REDIS_URL | Redis server | required if THROTTLE is enabled |
+| WHITELIST | Comma-separated list of allowed IP addresses | Optional |
+| USER_HEADER | Header containing unique user id | defaults to IP address if not set |
+
 #### Start the server
 
     $ rackup ./config.ru
