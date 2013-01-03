@@ -12,7 +12,7 @@ module Tassadar
         else
           [ 403,
             { 'Content-Type' => 'text/plain; charset=utf-8' },
-            Array( 'IP is not whitelisted' )
+            Array( "IP #{env['REMOTE_ADDR']} is not whitelisted" )
           ]
         end
       end
