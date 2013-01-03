@@ -4,6 +4,8 @@ PATH
     tassadar-server (0.0.1)
       grape
       grape-rabl
+      rack-throttle
+      redis
       tassadar
 
 GEM
@@ -50,6 +52,9 @@ GEM
       rack (>= 1.0.0)
     rack-test (0.6.1)
       rack (>= 1.0)
+    rack-throttle (0.3.0)
+      rack (>= 1.0.0)
+    redis (3.0.2)
     rspec (2.11.0)
       rspec-core (~> 2.11.0)
       rspec-expectations (~> 2.11.0)
