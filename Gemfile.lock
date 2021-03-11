@@ -46,7 +46,7 @@ GEM
     rabl (0.7.9)
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
-    rack (1.4.1)
+    rack (2.2.3)
     rack-accept (0.4.5)
       rack (>= 0.4)
     rack-mount (0.8.3)
